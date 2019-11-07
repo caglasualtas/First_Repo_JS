@@ -8,3 +8,5 @@
 [CW3](https://caglasualtas.github.io/First_Repo_JS/CW3.png)
 
 [CW4 - Student Course Database](https://caglasualtas.github.io/First_Repo_JS/StudentCoursesDatabase.html)
+
+[CW5 - Inspector ](https://caglasualtas.github.io/First_Repo_JS/work/EloquentJS.html)

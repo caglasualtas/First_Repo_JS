@@ -1,0 +1,27 @@
+{
+    "name": "Çağlasu Eylül ALTAŞ",
+    "description": "Advanced Programming Classworks",
+    "short_name": "First_Repo_JS",
+    "start_url": "/First_Repo_JS/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "#457cdb",
+    
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "logo.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

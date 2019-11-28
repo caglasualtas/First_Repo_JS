@@ -14,3 +14,5 @@
 [CW6 - File ](https://caglasualtas.github.io/First_Repo_JS/CW6)
 
 [CW7 - Timing ](https://caglasualtas.github.io/First_Repo_JS/Clock%2013_05.html)
+
+[CW8 - JSON Table ](https://caglasualtas.github.io/First_Repo_JS/CW8/CW8.html)

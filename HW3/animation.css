@@ -1,0 +1,96 @@
+body {
+    background-color: antiquewhite;
+}
+h2{
+    text-align: center;
+    position: relative;
+    top: -380px;
+    font-size: 30pt;
+}
+hr{
+    position: relative;
+    top: -380px;
+}
+
+
+#background{
+    font-size: 180px;
+    background: #cfc;
+    width: 300px;
+    height: 240px;
+    position: relative;
+
+}
+#runBtn{
+    position: absolute;
+   
+    left: 1300px;
+    right: 1300px;
+    top: 60px;
+    width: 100px;
+    height: 45px;
+    
+}
+#rotateBtn{
+    position: absolute;
+    
+    left: 1400px;
+    right: 1400px;
+    top: 60px;
+    width: 100px;
+    height: 45px;
+    
+}
+#jump{
+    position: absolute;
+    left: 1200px;
+    right: 1200px;
+    top: 60px;
+    width: 100px;
+    height: 45px;
+    
+}
+#submarine{
+position: relative;
+left: 1200px;
+top: 100px;
+}
+#man{
+    position: relative;
+    left: 150px;
+    top: 100px;
+    }
+#dog{
+    position: relative;
+    left: -650px;
+    top: 100px;
+    }
+#kanguru{
+    position: relative;
+    left: -1000px;
+    top: 500px;
+    }
+
+#txt{
+    text-align: center;
+    font-size: 55pt;
+    color:chocolate;
+}
+#btnFinish{
+    position: absolute;
+    left: 1500px;
+    right: 1500px;
+    top: 60px;
+    width: 100px;
+    height: 45px;
+
+}
+div{
+    text-align: center;
+background-color: black;
+
+}
+
+
+
+

@@ -1,0 +1,192 @@
+
+h2{
+text-align: center;
+
+
+}
+body{
+    background:antiquewhite;
+}
+button{
+width: 55px;
+height: 40px;
+}
+#oct{
+    background: gray;
+    position: fixed;
+    top: 180px;
+    left: 550px;
+}
+#dec{
+    background: gray;
+    position: fixed;
+    top: 230px;
+    left: 550px;
+}
+#bin{
+    background: gray;
+    position: fixed;
+    top: 280px;
+    left: 550px;
+}
+#hex{
+    background: gray;
+    position: fixed;
+    top: 330px;
+    left: 550px;
+}
+
+#dOct{
+    background: lightslategrey;
+    position: fixed;
+    top: 180px;
+    left: 600px;
+    height: 40px;
+     width: 600px;
+}
+#dDec{
+    background: lightslategrey;
+    position: fixed;
+    top: 230px;
+    left: 600px;
+    height: 40px;
+    width: 600px;
+}
+#dBin{
+    background: lightslategrey;
+    position: fixed;
+    top: 280px;
+    left: 600px;
+    height: 40px;
+    width: 600px;
+}
+#dHex{
+background: lightslategrey;
+    position: fixed;
+    top: 330px;
+    left: 600px;
+    height: 40px;
+    width: 600px;
+}
+
+#sıfır{
+    position: fixed;
+    top: 630px;
+    left: 690px;
+
+}
+#bir{
+    position: fixed;
+    top: 580px;
+    left: 620px;
+}
+#iki{
+    position: fixed;
+    top: 580px;
+    left: 690px;
+}
+#uc{
+    position: fixed;
+    top: 580px;
+    left: 760px;
+}
+#dort{
+    position: fixed;
+    top: 530px;
+    left: 620px;
+}
+#bes{
+    position: fixed;
+    top: 530px;
+    left: 690px;
+}
+#alti{
+    position: fixed;
+    top: 530px;
+    left: 760px;
+}
+#yedi{
+    position: fixed;
+    top: 480px;
+    left: 620px;
+}
+#sekiz{
+    position: fixed;
+    top: 480px;
+    left: 690px;
+}
+#dokuz{
+    position: fixed;
+    top: 480px;
+    left: 760px;
+}
+
+
+
+#A{position: fixed;
+    top: 380px;
+    left: 550px;
+}
+#B{position: fixed;
+    top: 430px;
+    left: 550px;}
+#C{position: fixed;
+    top: 480px;
+    left: 550px;}
+#D{position: fixed;
+    top: 530px;
+    left: 550px;}
+#E{position: fixed;
+    top: 580px;
+    left: 550px;}
+#F{position: fixed;
+    top: 630px;
+    left: 550px;}
+
+    #parantezAc{position: fixed;
+        top: 380px;
+        left: 620px;
+    }
+    #parantezKapa{position: fixed;
+        top: 380px;
+        left: 690px;
+    }
+    #silme{position: fixed;
+        top: 380px;
+        left: 760px;
+    }
+    #tekteksilme{position: fixed;
+        top: 380px;
+        left: 830px;
+    }
+    #esittir{
+        position: fixed;
+        top: 630px;
+        left: 830px;
+
+    }
+    #topla{
+    position: fixed;
+    top: 430px;
+    left: 620px;
+    }
+    #bol{ position: fixed;
+        top: 430px;
+        left: 760px;}
+    #cikar{
+     position: fixed;
+    top: 430px;
+    left: 690px;
+    }
+    #carp{
+        position: fixed;
+        top: 430px;
+        left: 830px;
+    }
+    #mod{
+
+        position: fixed;
+    top: 480px;
+    left: 830px;
+    }
+

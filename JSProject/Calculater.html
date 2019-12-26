@@ -11,47 +11,55 @@
 </head>
 
 <body>
-    <h2>Programlayıcı Hesap Makinesi</h2>
-    <div id="dBin"> <button id="bin">2</button> </div>
-    <div id="dOct"> <button id="oct">8</button> </div>
-    <div id="dDec"> <button id="dec">10</button> </div>
-    <div id="dHex"><button id="hex">16</button> </div>
+    <h1>Programlayıcı Hesap Makinesi</h1>
+    <div>
+        <div id="yazılan"></div>
+        <div id="sonuc"></div>
 
-    <button id="sıfır">0</button>
-    <button id="bir">1</button>
-    <button id="iki">2</button>
-    <button id="uc">3</button>
-    <button id="dort">4</button>
-    <button id="bes">5</button>
-    <button id="alti">6</button>
-    <button id="yedi">7</button>
-    <button id="sekiz">8</button>
-    <button id="dokuz">9</button>
+        <div id="dBin"> <button id="bin" onclick="showBin()">2</button> </div>
+        <div id="dOct"> <button id="oct" onclick="showOct()">8</button> </div>
+        <div id="dDec"> <button id="dec" onclick="showDec()">10</button> </div>
+        <div id="dHex"><button id="hex" onclick="showHex()">16</button> </div>
 
-    <button id="silme">CE</button>
-    <button id="tekteksilme"><-</button>
-    <button id="topla">+</button>
-    <button id="cikar">-</button>
-    <button id="bol">/</button>
-    <button id="carp">*</button>
-    <button id="esittir">=</button>
-    <button id="parantezAc">(</button>
-    <button id="parantezKapa">)</button>
-    <button id="mod">%</button>
-   
-    <button id="A">A</button>
-    <button id="B">B</button>
-    <button id="C">C</button>
-    <button id="D">D</button>
-    <button id="E">E</button>
-    <button id="F">F</button>
-    
+        <button id="sıfır" value="0" onclick="ekle(value)">0</button>
+        <button id="bir" value="1" onclick="ekle(value)">1</button>
+        <button id="iki" value="2" onclick="ekle(value)">2</button>
+        <button id="uc" value="3" onclick="ekle(value)">3</button>
+        <button id="dort" value="4" onclick="ekle(value)">4</button>
+        <button id="bes" value="5" onclick="ekle(value)">5</button>
+        <button id="alti" value="6" onclick="ekle(value)">6</button>
+        <button id="yedi" value="7" onclick="ekle(value)">7</button>
+        <button id="sekiz" value="8" onclick="ekle(value)">8</button>
+        <button id="dokuz" value="9" onclick="ekle(value)">9</button>
 
-    <script>
-        function btnRenkDegistirme() {
+        <button id="silme" onclick="silme()" >CE</button>
+        <button id="tekteksilme" onclick="tekSilme()">
+            <-</button>
+        <button id="topla" value="+" onclick="getOperand('+')">+</button>
+        <button class="button" id="cikar" value="-" onclick="getOperand('-')">-</button>
+        <button id="bol" value="/" onclick="getOperand('/')">/</button>
+        <button id="carp" value="*" onclick="getOperand('*')">*</button>
+        <button id="esittir" value="=" onclick="hesapla()">=</button>
+        <button id="parantezAc" value="(" onclick="ekle(value)">(</button>
+        <button id="parantezKapa" value=")" onclick="ekle(value)">)</button>
+        <button id="mod" value="%" onclick="getOperand('%')">%</button>
 
-        }
+        <button id="A" value="A" onclick="ekle(value)" style="display:none;">A</button>
+        <button id="B" value="B" onclick="ekle(value)" style="display:none;">B</button>
+        <button id="C" value="C" onclick="ekle(value)" style="display:none;">C</button>
+        <button id="D" value="D" onclick="ekle(value)" style="display:none;">D</button>
+        <button id="E" value="E" onclick="ekle(value)" style="display:none;">E</button>
+        <button id="F" value="F" onclick="ekle(value)" style="display:none;">F</button>
+    </div>
 
+    <div id="ref" style="background-color: darkgrey;">
+        <p>REF:</p>
+        <a href="http://teknokafe.net/2019/01/09/javascriptde-basit-hesap-makinesi-yapimi/">Basic Operations</a>
+        <br>
+        <a href="https://www.w3schools.com/jsref/jsref_eval.asp">Eval Function</a>
+        <br>
+        <a href="https://www.youtube.com/watch?v=7HiC7RK6f-c">Calculator Structure</a>
+    </div>
     </script>
 </body>
 

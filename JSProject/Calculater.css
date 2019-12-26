@@ -190,3 +190,28 @@ background: lightslategrey;
     left: 830px;
     }
 
+    #yazılan, #sonuc {
+        background-color: teal;
+        font: sans-serif;
+        font-size: 30px;
+        text-align: right;
+        border:none;
+        color:white
+        
+    }
+    
+    #yazılan {
+        position: fixed;
+        top: 80px;
+        left: 580px;
+        height: 48px;
+        width: 600px;
+    }
+    
+    #sonuc {
+        height: 48px;
+        width: 600px;
+        position: fixed;
+        top: 130px;
+        left: 580px;
+    }

@@ -11,48 +11,61 @@
 </head>
 
 <body>
-    <h1>Programlayıcı Hesap Makinesi</h1>
-    <div>
-        <div id="yazılan"></div>
-        <div id="sonuc"></div>
+    <div style="position: fixed; left: 30%; width: 40%;">
+        <h1>Programlayıcı Hesap Makinesi</h1>
+        <div>
+            <div id="yazılan"></div>
+            <div id="sonuc"></div>
+            <div id="basesDivD"></div>
+            <div id="basesDivO"></div>
+            <div id="basesDivH"></div>
+            <div id="basesDivB"></div>
+            <div id="dBin">
+                <label id="bin" class="option">
+                    <input type="radio" name="choices" value="2" onchange="show()" onchange=" baseConvertion()">2<span
+                        id="opt1"></span></label>
+            </div>
+            <div id="dOct"><label id="oct" class="option">
+                    <input type="radio" name="choices" value="8" onchange="show()">8<span id="opt1"></span></label>
+            </div>
+            <div id="dDec"><label id="dec" class="option">
+                    <input type="radio" name="choices" value="10" onchange="show()">10<span id="opt1"></span></label>
+            </div>
+            <div id="dHex"><label id="hex" class="option">
+                    <input type="radio" name="choices" value="16" onchange="show()"> 16 <span id="opt1"></span></label>
+            </div>
 
-        <div id="dBin"> <button id="bin" onclick="showBin()">2</button> </div>
-        <div id="dOct"> <button id="oct" onclick="showOct()">8</button> </div>
-        <div id="dDec"> <button id="dec" onclick="showDec()">10</button> </div>
-        <div id="dHex"><button id="hex" onclick="showHex()">16</button> </div>
+            <button id="sıfır" value="0" onclick="ekle(value)">0</button>
+            <button id="bir" value="1" onclick="ekle(value)">1</button>
+            <button id="iki" value="2" onclick="ekle(value)">2</button>
+            <button id="uc" value="3" onclick="ekle(value)">3</button>
+            <button id="dort" value="4" onclick="ekle(value)">4</button>
+            <button id="bes" value="5" onclick="ekle(value)">5</button>
+            <button id="alti" value="6" onclick="ekle(value)">6</button>
+            <button id="yedi" value="7" onclick="ekle(value)">7</button>
+            <button id="sekiz" value="8" onclick="ekle(value)">8</button>
+            <button id="dokuz" value="9" onclick="ekle(value)">9</button>
 
-        <button id="sıfır" value="0" onclick="ekle(value)">0</button>
-        <button id="bir" value="1" onclick="ekle(value)">1</button>
-        <button id="iki" value="2" onclick="ekle(value)">2</button>
-        <button id="uc" value="3" onclick="ekle(value)">3</button>
-        <button id="dort" value="4" onclick="ekle(value)">4</button>
-        <button id="bes" value="5" onclick="ekle(value)">5</button>
-        <button id="alti" value="6" onclick="ekle(value)">6</button>
-        <button id="yedi" value="7" onclick="ekle(value)">7</button>
-        <button id="sekiz" value="8" onclick="ekle(value)">8</button>
-        <button id="dokuz" value="9" onclick="ekle(value)">9</button>
+            <button id="silme" onclick="sil()">CE</button>
+            <button id="tekteksilme" onclick="tekSil()">C </button>
+            <button id="topla" value="+" onclick="ekle(value)">+</button>
+            <button class="button" id="cikar" value="-" onclick="ekle(value)">-</button>
+            <button id="bol" value="/" onclick="ekle(value)">/</button>
+            <button id="carp" value="*" onclick="ekle(value)">*</button>
+            <button id="esittir" value="=" onclick="hesap()">=</button>
+            <button id="parantezAc" value="(" onclick="parantez(value)">(</button>
+            <button id="parantezKapa" value=")" onclick="parantez(value)">)</button>
+            <button id="mod" value="%" onclick="ekle(value)">%</button>
 
-        <button id="silme" onclick="silme()" >CE</button>
-        <button id="tekteksilme" onclick="tekSilme()">
-            <-</button>
-        <button id="topla" value="+" onclick="getOperand('+')">+</button>
-        <button class="button" id="cikar" value="-" onclick="getOperand('-')">-</button>
-        <button id="bol" value="/" onclick="getOperand('/')">/</button>
-        <button id="carp" value="*" onclick="getOperand('*')">*</button>
-        <button id="esittir" value="=" onclick="hesapla()">=</button>
-        <button id="parantezAc" value="(" onclick="ekle(value)">(</button>
-        <button id="parantezKapa" value=")" onclick="ekle(value)">)</button>
-        <button id="mod" value="%" onclick="getOperand('%')">%</button>
-
-        <button id="A" value="A" onclick="ekle(value)" style="display:none;">A</button>
-        <button id="B" value="B" onclick="ekle(value)" style="display:none;">B</button>
-        <button id="C" value="C" onclick="ekle(value)" style="display:none;">C</button>
-        <button id="D" value="D" onclick="ekle(value)" style="display:none;">D</button>
-        <button id="E" value="E" onclick="ekle(value)" style="display:none;">E</button>
-        <button id="F" value="F" onclick="ekle(value)" style="display:none;">F</button>
+            <button id="A" value="A" style="display:none;" onclick="ekle(value)">A</button>
+            <button id="B" value="B" style="display:none;" onclick="ekle(value)">B</button>
+            <button id="C" value="C" style="display:none;" onclick="ekle(value)">C</button>
+            <button id="D" value="D" style="display:none;" onclick="ekle(value)">D</button>
+            <button id="E" value="E" style="display:none;" onclick="ekle(value)">E</button>
+            <button id="F" value="F" style="display:none;" onclick="ekle(value)">F</button>
+        </div>
     </div>
-
-    <div id="ref" style="background-color: darkgrey;">
+    <div id="ref">
         <p>REF:</p>
         <a href="http://teknokafe.net/2019/01/09/javascriptde-basit-hesap-makinesi-yapimi/">Basic Operations</a>
         <br>
@@ -60,7 +73,8 @@
         <br>
         <a href="https://www.youtube.com/watch?v=7HiC7RK6f-c">Calculator Structure</a>
     </div>
-  
+
+
 </body>
 
 </html>

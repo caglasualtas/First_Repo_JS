@@ -1,15 +1,12 @@
 h1 {
-    text-align: center;
+    position: fixed;
+    left: 145px;
 }
 
 #ref {
     position: fixed;
     top: 600px;
-    left: 1500px;
-}
-
-body 
-{
+    left: 550px;
 }
 
 button {
@@ -20,218 +17,238 @@ button {
 
 #oct {
     position: fixed;
-    top: 180px;
-    left: 550px;
+    top: 230px;
+    left: 100px;
 }
 
 #dec {
     position: fixed;
-    top: 230px;
-    left: 550px;
+    top: 280px;
+    left: 100px;
 }
 
 #bin {
     position: fixed;
-    top: 280px;
-    left: 550px;
+    top: 330px;
+    left: 100px;
 }
 
 #hex {
     position: fixed;
-    top: 330px;
-    left: 550px;
+    top: 373px;
+    left: 100px;
 }
-#dOct,#dDec,#dBin,#dHex{
-text-align: right;
 
-}
 #dOct {
     position: fixed;
     top: 182px;
-    left: 600px;
-    height: 38px;
-    width: 600px;
+    left: 100px;
 }
 
 #dDec {
     position: fixed;
     top: 232px;
-    left: 600px;
-    height: 38px;
-    width: 600px;
+    left: 100px;
 }
 
 #dBin {
     position: fixed;
     top: 282px;
-    left: 600px;
-    height: 38px;
-    width: 600px;
+    left: 100px;
 }
 
 #dHex {
     position: fixed;
     top: 332px;
-    left: 600px;
-    height: 38px;
-    width: 600px;
+    left: 100px;
+}
+
+#basesDivO, #basesDivB, #basesDivD, #basesDivH {
+    width: 195px;
+    height: 42px;
+    position: fixed;
+    left: 352px;
+    text-align: right;
+    font: sans-serif;
+    font-size: 22px;
+}
+
+#basesDivO {
+    position: fixed;
+    top: 215px;
+    
+}
+
+#basesDivD {
+    position: fixed;
+    top: 265px;
+}
+
+#basesDivB {
+    position: fixed;
+    top: 315px;
+   
+}
+
+#basesDivH {
+    position: fixed;
+    top: 365px;
+   
 }
 
 #sıfır {
     position: fixed;
     top: 630px;
-    left: 690px;
+    left: 270px;
 }
 
 #bir {
     position: fixed;
     top: 580px;
-    left: 620px;
+    left: 200px;
 }
 
 #iki {
     position: fixed;
     top: 580px;
-    left: 690px;
+    left: 270px;
 }
 
 #uc {
     position: fixed;
     top: 580px;
-    left: 760px;
+    left: 340px;
 }
 
 #dort {
     position: fixed;
     top: 530px;
-    left: 620px;
+    left: 200px;
 }
 
 #bes {
     position: fixed;
     top: 530px;
-    left: 690px;
+    left: 270px;
 }
 
 #alti {
     position: fixed;
     top: 530px;
-    left: 760px;
+    left: 340px;
 }
 
 #yedi {
     position: fixed;
     top: 480px;
-    left: 620px;
+    left: 200px;
 }
 
 #sekiz {
     position: fixed;
     top: 480px;
-    left: 690px;
+    left: 270px;
 }
 
 #dokuz {
     position: fixed;
     top: 480px;
-    left: 760px;
+    left: 340px;
 }
 
 #A {
     position: fixed;
-    top: 380px;
-    left: 550px;
+    top: 430px;
+    left: 130px;
 }
-
 #B {
     position: fixed;
-    top: 430px;
-    left: 550px;
+    top: 480px;
+    left: 130px;
 }
 
 #C {
     position: fixed;
-    top: 480px;
-    left: 550px;
+    top: 530px;
+    left: 130px;
 }
 
 #D {
     position: fixed;
-    top: 530px;
-    left: 550px;
+    top: 580px;
+    left: 130px;
 }
 
 #E {
     position: fixed;
-    top: 580px;
-    left: 550px;
+    top: 630px;
+    left: 130px;
 }
 
 #F {
     position: fixed;
-    top: 630px;
-    left: 550px;
+    top: 680px;
+    left: 130px;
 }
 
 #parantezAc {
     position: fixed;
-    top: 380px;
-    left: 620px;
+    top: 430px;
+    left: 480px;
 }
 
 #parantezKapa {
     position: fixed;
-    top: 380px;
-    left: 690px;
+    top: 480px;
+    left: 480px;
 }
 
 #silme {
     position: fixed;
-    top: 380px;
-    left: 760px;
+    top: 580px;
+    left: 410px;
 }
 
 #tekteksilme {
     position: fixed;
-    top: 380px;
-    left: 830px;
+    top: 530px;
+    left: 410px;
 }
 
 #esittir {
     position: fixed;
     top: 630px;
-    left: 830px;
+    left: 410px;
 }
 
 #topla {
     position: fixed;
     top: 430px;
-    left: 620px;
+    left: 200px;
 }
 
 #bol {
     position: fixed;
     top: 430px;
-    left: 760px;
+    left: 410px;
 }
 
 #cikar {
     position: fixed;
     top: 430px;
-    left: 690px;
+    left: 270px;
 }
 
 #carp {
     position: fixed;
     top: 430px;
-    left: 830px;
+    left: 340px;
 }
 
 #mod {
     position: fixed;
     top: 480px;
-    left: 830px;
-    
+    left: 410px;
 }
 
 #yazılan, #sonuc {
@@ -239,23 +256,22 @@ text-align: right;
     font: sans-serif;
     font-size: 30px;
     text-align: right;
-    border:none;
-    color:white
-    
+    border: none;
+    color: white;
+    height: 48px;
+    width: 400px;
 }
 
 #yazılan {
     position: fixed;
-    top: 80px;
-    left: 580px;
-    height: 48px;
-    width: 600px;
+    top: 120px;
+    left: 150px;
+    
 }
 
 #sonuc {
-    height: 48px;
-    width: 600px;
+   
     position: fixed;
-    top: 130px;
-    left: 580px;
+    top: 160px;
+    left: 150px;
 }

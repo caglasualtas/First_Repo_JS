@@ -3,6 +3,11 @@ h1 {
     position: fixed;
     left: 145px;
 }
+body{
+    width: 600px;
+    height: 800px;
+
+}
 
 #ref {
     position: fixed;

@@ -110,7 +110,7 @@ function show() {
             octId.innerText = '';
             binId.innerText = '';
             hexId.innerText = '';
-            yazılan.innerHTML='';
+            yazılan.innerHTML = '';
             if (options[i].value == '2') {
 
                 if (element1.style.display == "" || element2.style.display == ""
@@ -373,6 +373,7 @@ function base16Convertion(number) {
     }
 }
 function hesap() {
+    let sonuc;
     let i = 0, j = 0, k = 0, l = 0;
     let numbers = [];
     let n1 = 0, n2 = 0;
@@ -386,183 +387,176 @@ function hesap() {
     let tempNum = number;
     let options = document.getElementsByName('choices');
     console.log();
-    if (options[0].checked == false && options[1].checked == false &&
-        options[2].checked == false && options[3].checked == false || options[2].checked == true) {
-        for (i = 0; i < number.length; i++) {
-            if (number.charAt(i) == '+') {
-                n1 = number.substring(0, i);
-                number = number.substring(i + 1, number.length);
-                sonuc = parseInt(n1) + parseInt(number);
+    if (number.includes('+') || number.includes('-') || number.includes('/') || number.includes('*') ||number.includes('%')   ) {
+        if (options[0].checked == false && options[1].checked == false &&
+            options[2].checked == false && options[3].checked == false || options[2].checked == true) {
+            for (i = 0; i < number.length; i++) {
+                if (number.charAt(i) == '+') {
+                    n1 = number.substring(0, i);
+                    number = number.substring(i + 1, number.length);
+                    sonuc = Math.floor(parseInt(n1) + parseInt(number));
 
-            } else if (number.charAt(i) == '-') {
-                n1 = number.substring(0, i);
-                number = number.substring(i + 1, number.length);
-                sonuc = parseInt(n1) - parseInt(number);
+                } else if (number.charAt(i) == '-') {
+                    n1 = number.substring(0, i);
+                    number = number.substring(i + 1, number.length);
+                    sonuc = Math.floor(parseInt(n1) - parseInt(number));
 
-            } else if (number.charAt(i) == '*') {
-                n1 = number.substring(0, i);
-                number = number.substring(i + 1, number.length);
-                sonuc = parseInt(n1) * parseInt(number);
+                } else if (number.charAt(i) == '*') {
+                    n1 = number.substring(0, i);
+                    number = number.substring(i + 1, number.length);
+                    sonuc = Math.floor(parseInt(n1) * parseInt(number));
 
-            } else if (number.charAt(i) == '/') {
-                n1 = number.substring(0, i);
-                number = number.substring(i + 1, number.length);
-                sonuc = parseInt(n1) / parseInt(number);
+                } else if (number.charAt(i) == '/') {
+                    n1 = number.substring(0, i);
+                    number = number.substring(i + 1, number.length);
+                    sonuc = Math.floor(parseInt(n1) / parseInt(number));
 
-            } else if (number.charAt(i) == '%') {
-                n1 = number.substring(0, i);
-                number = number.substring(i + 1, number.length);
-                sonuc = parseInt(n1) % parseInt(number);
+                } else if (number.charAt(i) == '%') {
+                    n1 = number.substring(0, i);
+                    number = number.substring(i + 1, number.length);
+                    sonuc = Math.floor(parseInt(n1) % parseInt(number));
+                }
             }
-        }
-        console.log(sonuc);
-        baseDecDiv.innerText = sonuc;
-        giris.innerText = sonuc;
-        baseHexDiv = base10Convertion(sonuc);
-        baseOctDiv = base10Convertion(sonuc);
-        baseBinDiv = base10Convertion(sonuc);
-    }
-    else if (options[0].checked) {
-        for (j = 0; j < number.length; j++) {
-            if (number.charAt(j) == '+') {
-                n1 = parseInt(number.substring(0, j) + '', 2).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 2).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) + Number(n2);
-                console.log(sonuc);
-            } else if (number.charAt(j) == '-') {
-                n1 = parseInt(number.substring(0, j) + '', 2).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 2).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) - Number(n2);
-                console.log(sonuc);
-            } else if (number.charAt(j) == '*') {
-                n1 = parseInt(number.substring(0, j) + '', 2).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 2).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) * Number(n2);
-                console.log(sonuc);
-            } else if (number.charAt(j) == '/') {
-                n1 = parseInt(number.substring(0, j) + '', 2).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 2).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) / Number(n2);
-                console.log(sonuc);
-            } if (number.charAt(j) == '%') {
-                n1 = parseInt(number.substring(0, j) + '', 2).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 2).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) % Number(n2);
-                console.log(sonuc);
-                sonuc = parseInt(number.substring(j + 1, number.length) + '', 10).toString(2);
+            console.log(sonuc);
+            baseDecDiv.innerText = sonuc;
+            giris.innerText = sonuc;
+            baseHexDiv = base10Convertion(sonuc);
+            baseOctDiv = base10Convertion(sonuc);
+            baseBinDiv = base10Convertion(sonuc);
+        } else if (options[0].checked == true) {
+            for (k = 0; k < number.length; k++) {
+                if (number.charAt(k) == '+') {
+                    n1 = parseInt(number.substring(0, k) + '', 2).toString(10);
+                    n2 = parseInt(number.substring(k + 1, number.length) + '', 2).toString(10);
+                    console.log(n1 + ' ' + n2);
+                    sonuc = Number(n1) + Number(n2);
+                    console.log(sonuc);
+                } if (number.charAt(k) == '-') {
+                    n1 = parseInt(number.substring(0, k) + '', 2).toString(10);
+                    n2 = parseInt(number.substring(k + 1, number.length) + '', 2).toString(10);
+                    console.log(n1 + ' ' + n2);
+                    sonuc = (Number(n1) - Number(n2));
+                    console.log(sonuc);
+                } if (number.charAt(k) == '*') {
+                    n1 = parseInt(number.substring(0, k) + '', 2).toString(10);
+                    n2 = parseInt(number.substring(k + 1, number.length) + '', 2).toString(10);
+                    console.log(n1 + ' ' + n2);
+                    sonuc = Math.floor(Number(n1) * Number(n2));
+                    console.log(sonuc);
+                } if (number.charAt(k) == '/') {
+                    n1 = parseInt(number.substring(0, k) + '', 2).toString(10);
+                    n2 = parseInt(number.substring(k + 1, number.length) + '', 2).toString(10);
+                    console.log(n1 + ' ' + n2);
+                    sonuc = Math.floor(Number(n1) / Number(n2));
+                    console.log(sonuc);
+                } if (number.charAt(k) == '%') {
+                    n1 = parseInt(number.substring(0, k) + '', 2).toString(10);
+                    n2 = parseInt(number.substring(k + 1, number.length) + '', 2).toString(10);
+                    console.log(n1 + ' ' + n2);
+                    sonuc = (Number(n1) % Number(n2));
+                    console.log(sonuc);
+                }
             }
-        }
-        baseBinDiv = sonuc;
-        baseHexDiv = parseInt(sonuc + '', 2).toString(16);
-        baseOctDiv = parseInt(sonuc + '', 2).toString(8);
-        baseDecDiv = parseInt(sonuc + '', 2).toString(10);
-    } else if (options[1].checked) {
-        for (j = 0; j < number.length; j++) {
-            if (number.charAt(j) == '+') {
-                n1 = parseInt(number.substring(0, j) + '', 8).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 8).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) + Number(n2);
-                console.log(sonuc);
-            } else if (number.charAt(j) == '-') {
-                n1 = parseInt(number.substring(0, j) + '', 8).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 8).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) - Number(n2);
-                console.log(sonuc);
-            } if (number.charAt(j) == '/') {
-                n1 = parseInt(number.substring(0, j) + '', 8).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 8).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) / Number(n2);
-                console.log(sonuc);
-            } if (number.charAt(j) == '*') {
-                n1 = parseInt(number.substring(0, j) + '', 8).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 8).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) * Number(n2);
-                console.log(sonuc);
-            } if (number.charAt(j) == '%') {
-                n1 = parseInt(number.substring(0, j) + '', 8).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 8).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) % Number(n2);
-                sonuc = parseInt(number.substring(j + 1, number.length) + '', 10).toString(8);
+            baseBinDiv.innerText = sonuc;
+            baseHexDiv = base10Convertion(sonuc);
+            baseOctDiv = base10Convertion(sonuc);
+            baseDecDiv = base10Convertion(sonuc);
+            giris.innerText = baseBinDiv.innerText;
 
+        } else if (options[1].checked == true) {
+            for (l = 0; l < number.length; l++) {
+                if (number.charAt(l) == '+') {
+                    n1 = parseInt(number.substring(0, l) + '', 8).toString(10);
+                    n2 = parseInt(number.substring(l + 1, number.length) + '', 8).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) + Number(n2);
+                    console.log(sonuc);
+                } if (number.charAt(l) == '-') {
+                    n1 = parseInt(number.substring(0, l) + '', 8).toString(10);
+                    n2 = parseInt(number.substring(l + 1, number.length) + '', 8).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) - Number(n2);
+                    console.log(sonuc);
+                } if (number.charAt(l) == '/') {
+                    n1 = parseInt(number.substring(0, l) + '', 16).toString(10);
+                    n2 = parseInt(number.substring(l + 1, number.length) + '', 8).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Math.floor(Number(n1) / Number(n2));
+                    console.log(sonuc);
+                } if (number.charAt(l) == '*') {
+                    n1 = parseInt(number.substring(0, l) + '', 8).toString(10);
+                    n2 = parseInt(number.substring(l + 1, number.length) + '', 8).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) * Number(n2);
+                    console.log(sonuc);
+                } if (number.charAt(l) == '%') {
+                    n1 = parseInt(number.substring(0, l) + '', 8).toString(10);
+                    n2 = parseInt(number.substring(l + 1, number.length) + '', 8).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) % Number(n2);
+                    console.log(sonuc);
+                }
             }
+            baseOctDiv.innerText = sonuc;
+            baseHexDiv = base10Convertion(sonuc);
+            baseBinDiv = base10Convertion(sonuc);
+            baseDecDiv = base10Convertion(sonuc);
+            giris.innerText = baseOctDiv.innerText;
         }
-        baseOctDiv = sonuc;
-        baseHexDiv = parseInt(sonuc + '', 8).toString(16);
-        baseBinDiv = parseInt(sonuc + '', 8).toString(2);
-        baseDecDiv = parseInt(sonuc + '', 8).toString(10);
-    } else if (options[3].checked) {
-        for (j = 0; j < number.length; j++) {
-            if (number.charAt(j) == '+') {
-                n1 = parseInt(number.substring(0, j) + '', 16).toString(10);
-                n2 = parseInt(number.substring(j + 1, number.length) + '', 16).toString(10);
-                console.log(n1);
-                console.log(n2);
-                sonuc = Number(n1) + Number(n2);
-                console.log(sonuc);
+
+
+        else if (options[3].checked) {
+            for (j = 0; j < number.length; j++) {
+                if (number.charAt(j) == '+') {
+                    n1 = parseInt(number.substring(0, j) + '', 16).toString(10);
+                    n2 = parseInt(number.substring(j + 1, number.length) + '', 16).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) + Number(n2);
+                    console.log(sonuc);
+                } if (number.charAt(j) == '-') {
+                    n1 = parseInt(number.substring(0, j) + '', 16).toString(10);
+                    n2 = parseInt(number.substring(j + 1, number.length) + '', 16).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) - Number(n2);
+                    console.log(sonuc);
+                } if (number.charAt(j) == '/') {
+                    n1 = parseInt(number.substring(0, j) + '', 16).toString(10);
+                    n2 = parseInt(number.substring(j + 1, number.length) + '', 16).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Math.floor(Number(n1) / Number(n2));
+                    console.log(sonuc);
+                } if (number.charAt(j) == '*') {
+                    n1 = parseInt(number.substring(0, j) + '', 16).toString(10);
+                    n2 = parseInt(number.substring(j + 1, number.length) + '', 16).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) * Number(n2);
+                    console.log(sonuc);
+                } if (number.charAt(j) == '%') {
+                    n1 = parseInt(number.substring(0, j) + '', 16).toString(10);
+                    n2 = parseInt(number.substring(j + 1, number.length) + '', 16).toString(10);
+                    console.log(n1);
+                    console.log(n2);
+                    sonuc = Number(n1) % Number(n2);
+                    console.log(sonuc);
+                }
             }
+
+            baseHexDiv.innerText = sonuc;
+            baseBinDiv = base10Convertion(sonuc);
+            baseOctDiv = base10Convertion(sonuc);
+            baseDecDiv = base10Convertion(sonuc);
+            giris.innerText = baseHexDiv.innerText;
         }
-        baseHexDiv.innerText = sonuc;
-        baseBinDiv = base10Convertion(sonuc);
-        baseOctDiv = base10Convertion(sonuc);
-        baseDecDiv = base10Convertion(sonuc);
+
     }
 
 }
-var screen = "";
-function operatorFunx() {
-    if (screen.indexOf("+") != -1) {
-      var numbers = screen.split("+");
-      var x = parseInt(numbers[0], 2);
-      var y = parseInt(numbers[1], 2);
-      var sum = x + y;
-      var ans = sum.toString(2);
-    } else if (screen.indexOf("-") != -1) {
-      var numbers = screen.split("-");
-      var x = parseInt(numbers[0], 2);
-      var y = parseInt(numbers[1], 2);
-      var sub = x - y;
-      var ans = sub.toString(2);
-    } else if (screen.indexOf("*") != -1) {
-      var numbers = screen.split("*");
-      var x = parseInt(numbers[0], 2);
-      var y = parseInt(numbers[1], 2);
-      var mul = x * y;
-      var ans = mul.toString(2);
-    } else if (screen.indexOf("/") != -1) {
-      var numbers = screen.split("/");
-      var x = parseInt(numbers[0], 2);
-      var y = parseInt(numbers[1], 2);
-      var div = x / y;
-      var ans = div.toString(2);
-    }
-    screen = ans;
-    document.getElementById("yazılan").innerHTML = screen;
-  }
-  
-
-
-
-
-
-
-

@@ -10,8 +10,9 @@ body{
 }
 #ref {
     position: fixed;
-    top: 600px;
-    left: 550px;
+    top: 670px;
+    left: 10%;
+   
 }
 
 button {
